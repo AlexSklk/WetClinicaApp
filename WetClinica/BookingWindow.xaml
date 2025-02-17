@@ -1,0 +1,41 @@
+﻿<Window x:Class="WetClinica.BookingWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Запись на услугу" Height="300" Width="400">
+    <Grid>
+        <StackPanel Margin="10">
+            <TextBlock Text="Выберите услугу:"/>
+            <ComboBox x:Name="ServiceComboBox">
+                <ComboBoxItem Content="Консультация ветеринара"/>
+                <ComboBoxItem Content="Вакцинация"/>
+                <ComboBoxItem Content="Хирургическая операция"/>
+                <ComboBoxItem Content="Диагностика"/>
+                <ComboBoxItem Content="Стационарное лечение"/>
+            </ComboBox>
+
+            <TextBlock Text="Введите дату и время:"/>
+            <Grid>
+                <TextBox x:Name="DateTimeTextBox" Width="200" Padding="5"/>
+                <TextBlock Text="Например: 14.03.2025 14:30" 
+                           Foreground="Gray" 
+                           IsHitTestVisible="False" 
+                           VerticalAlignment="Center"
+                           Margin="5,0,0,0"
+                           Opacity="0.7"/>
+            </Grid>
+
+            <TextBlock Text="Контактная информация:"/>
+            <Grid>
+                <TextBox x:Name="ContactTextBox" Width="200" Padding="5"/>
+                <TextBlock Text="Введите номер телефона" 
+                           Foreground="Gray" 
+                           IsHitTestVisible="False" 
+                           VerticalAlignment="Center"
+                           Margin="5,0,0,0"
+                           Opacity="0.7"/>
+            </Grid>
+
+            <Button Content="Записать" Click="BookAppointment_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>
